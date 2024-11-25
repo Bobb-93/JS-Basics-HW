@@ -2,4 +2,4 @@
 let a = 1, b = 1;
 console.log( a++ + ++a); 	//  4 (1+3)
 console.log( ++b + b++); 	// 4 (2+2)
-console.log( a + b); 			// 6 (3+3)
+console.log( a + b); 		// 6 (3+3)

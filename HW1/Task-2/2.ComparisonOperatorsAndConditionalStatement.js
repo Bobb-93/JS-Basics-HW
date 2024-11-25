@@ -24,7 +24,6 @@ function greetings() {
 			console.log("Salut!");
 			break;
 
-
 		case "Лондон":
 			console.log("Hi!");
 			break;
@@ -32,7 +31,6 @@ function greetings() {
 		default:
 			break;
 	}
-	
 	
 	// --> YOUR CODE ENDS HERE <--
 
