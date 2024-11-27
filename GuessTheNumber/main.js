@@ -9,16 +9,16 @@ let maxTries = 5;
 
 //alert(randomNumber);
 
-switch (difficulty) {
-    case "Easy":
+switch (difficulty.toLowerCase()) {
+    case "easy":
         break;
 
-    case "Normal":
+    case "normal":
         maxNumber = 50;
         maxTries = 7;
         break;
 
-    case "Hard":
+    case "hard":
         maxNumber = 100;
         maxTries = 10;
         break;
@@ -52,9 +52,9 @@ while (userGuess !== randomNumber) {
     //alert(userTries);
     // Compare the Guess to the Random Number and Provide Feedback
     if (userGuess > randomNumber) {
-        alert("Твърде висока стойност! Опитайте отново.");
+        alert("Твърде висока стойност!");
     } else if (userGuess < randomNumber) {
-        alert("Твърде ниска стойност! Опитайте отново.");
+        alert("Твърде ниска стойност!");
     } else if (userGuess === randomNumber) {
         alert(`Поздравления! Познахте моето число!`);
         break;
