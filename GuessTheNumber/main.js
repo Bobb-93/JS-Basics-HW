@@ -60,7 +60,7 @@ while (userGuess !== randomNumber) {
         break;
     }
 
-    if (userTries === maxTries && userGuess !== randomNumber) {
+    if (userTries === maxTries) {
         alert(`Играта свърши! Числото беше ${randomNumber}.`);
         break;
     }
