@@ -6,72 +6,7 @@
     <title>Guess the Number Game</title>
 </head>
 <body>
-    <script>
-        let difficulty = prompt("Изберете трудност! Easy (за числата от 1 до 10), Normal (1-50) или Hard (1-100)")
-
-        let maxNumber;
-
-        switch (difficulty) {
-            case "Easy":
-                maxNumber = 10;
-                break;
-        
-            case "Normal":
-                maxNumber = 50;
-                break;
-
-            case "Hard":
-                maxNumber = 100;
-                break;
-
-            default:
-                alert("Невалидна трудност! Автоматично е избрана трудност Easy...");
-                
-                // Не мога да рефрешна страницата с location.reload(); или да спра страницата с window.stop();
-                // за да искам от потребителя да въведе нова трудност. Поради това измислих да става по този начин.
-
-                maxNumber = 10;
-                break;
-        }
-        // Initialize Variables
-        let randomNumber = Math.floor(Math.random() * maxNumber) + 1; // Generate a Random Number
-        let userGuess = null;
-        let userTries = 0;
-
-        // Game Logic
-        while (userGuess !== randomNumber) {
-
-            if(userTries <= 10){
-                
-                // Prompt the User for Input
-                userGuess = parseInt(prompt(`Познайте числото между 1 и ${maxNumber}:`));
-
-                // validate user guess (must be number in [1..maxNumber])
-                if( isNaN(userGuess) || userGuess < 1 || userGuess > maxNumber ) {
-                    alert('Моля въведете валидно число между 1 и ${maxNumber}!');
-                    continue;
-                }
-
-                userTries++;
-                // Compare the Guess to the Random Number and Provide Feedback
-                if (userGuess > randomNumber) {
-                    alert("Твърде висока стойност! Опитайте отново.");
-                } else if (userGuess < randomNumber) {
-                    alert("Твърде ниска стойност! Опитайте отново.");
-                } else if(userGuess === randomNumber) {
-                    alert(`Поздравления! Познахте моето число!`);
-                    break;
-                } 
-                
-                if(userTries === 10 && userGuess !== randomNumber){
-                    alert(`Играта свърши! Числото беше ${randomNumber}.`);
-                    break;
-                }
-                
-            } 
-        }
-
-        alert(`Общият брой опити е ${userTries}`);
-    </script>
+    <h1>Познайте числото!</h1>
+    <script src="main.js"></script>
 </body>
 </html>
