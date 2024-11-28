@@ -18,3 +18,15 @@ let answers = [
     "Cascading Style Sheets"
 ];
 
+let quizContainer = document.getElementById('quiz-container');
+quizContainer = '';
+
+for (let i = 0; i < questions.length; i++) {
+    let questionHTML = `
+        <div class="question"
+            <h2>${questions[i]}</h2>
+            <ul>
+    `;
+    
+    
+}
