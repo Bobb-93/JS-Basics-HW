@@ -1,8 +1,3 @@
-/*
-<h1>Sum array elements</h1>
-<p>TASK: make sure to understand the example code and write the task given at the end of JS part.</p>
-*/
-
 // Example - sum all numbers in the interval [1..10]:
 let sum = 0;
 for ( let x = 1; x <= 10 ; x++ ){

@@ -1,8 +1,3 @@
-/*
-<h1>Modeling person(student) data as arrays</h1>
-<p><b>TASK</b>: try to understand how the code really works, and make the task, given at the end of JS part, without looking at the example code.</p>
-*/
-
 // store students data as array of arrays:
 let students = [
     ["male",24,"Ivan","Ivanov"],

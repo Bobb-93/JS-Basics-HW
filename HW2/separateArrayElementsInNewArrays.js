@@ -1,7 +1,3 @@
-/*
-<h1>TASK: Separate array elements in new arrays</h1>
-*/
-
 // TASK: Given the array: numbersArr bellow, write the code (using a for loop) which will create two new arrays:
 // evenNums - which elements will be the positive even numbers from numbersArr.
 // oddNums - which elements will be the negative odd numbers from numbersArr.
