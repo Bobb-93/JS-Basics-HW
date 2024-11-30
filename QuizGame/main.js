@@ -46,3 +46,24 @@ for (let i = 0; i < questions.length; i++) {
 
     quizContainer.innerHTML += questionHTML;
 }
+
+let submitButton = document.getElementById('submit-quiz');
+submitButton.addEventListener('click', function () {
+    //Initialize score variable
+    let score = 0;
+
+    //Loop through each question to check the selected answer
+    for (let i = 0; i < questions.length; i++) {
+        let selectedOption = document.querySelector(`input[name="question${i}"]:checked`);
+        
+        //Check if the selected option is correct
+        if(selectedOption && selectedOption.value === answers[i]){
+            score++;
+        }
+    }
+
+    //Display the final score
+    let resultContainer = document.getElementById('result');
+    resultContainer.innerHTML = `<h2>Your score is ${score} out of ${questions.length}</h2>`;
+
+});
