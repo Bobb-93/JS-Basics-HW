@@ -1,5 +1,6 @@
 //Array of questions
-let questions = [ "What is the capital of France?", 
+let questions = [ 
+    "What is the capital of France?", 
     "Which language is used for Front-end Web development?",
     "What does CSS stand for?"
 ];
