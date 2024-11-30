@@ -20,7 +20,7 @@ let answers = [
 ];
 
 let quizContainer = document.getElementById('quiz-container');
-quizContainer = '';
+quizContainer.innerHTML = '';
 
 for (let i = 0; i < questions.length; i++) {
     let questionHTML = `
@@ -29,5 +29,20 @@ for (let i = 0; i < questions.length; i++) {
             <ul>
     `;
     
-    
+    for (let j = 0; j < options[i].length; j++) {
+        questionHTML += `
+            <li>
+                <label>
+                    <input type="radio" name="question${i}" value="${options[i][j]}"> ${options[i][j]} 
+                </label>
+            </li>
+        `;
+    }
+
+    questionHTML += `
+            </ul>
+        </div>
+    `;
+
+    quizContainer.innerHTML += questionHTML;
 }
