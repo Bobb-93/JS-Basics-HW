@@ -9,7 +9,9 @@ let fruitsData = [
 
 for (let j = 0; j < fruitsData[0].length; j++) {
 
-  console.log(`${fruitsData[0][j]} = ${(Math.round(fruitsData[1][j] * 100) / 100).toFixed(1)}`);
+  //console.log(`${fruitsData[0][j]} = ${(Math.round(fruitsData[1][j] * 100) / 100).toFixed(1)}`);
+
+  console.log(`${fruitsData[0][j]} = ${fruitsData[1][j].toFixed(1)}`);
 
 }
 
