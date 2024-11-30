@@ -6,6 +6,7 @@ let userGuess = null;
 let userTries = 0;
 let maxNumber = 10;
 let maxTries = 5;
+let numbersHistory = [];
 
 //alert(randomNumber);
 
@@ -39,7 +40,7 @@ randomNumber = Math.floor(Math.random() * maxNumber) + 1; // Generate a Random N
 while (userGuess !== randomNumber) {
 
     // Prompt the User for Input
-    userGuess = parseInt(prompt(`Познайте числото между 1 и ${maxNumber}:`));
+    userGuess = parseInt(prompt(`Познайте числото между 1 и ${maxNumber}:\nИстория: ${numbersHistory.join(', ')}`));
     //alert(userGuess);
 
     // validate user guess (must be number in [1..maxNumber])
@@ -49,6 +50,7 @@ while (userGuess !== randomNumber) {
     }
 
     userTries++;
+    numbersHistory.unshift(userGuess);
     //alert(userTries);
     // Compare the Guess to the Random Number and Provide Feedback
     if (userGuess > randomNumber) {
