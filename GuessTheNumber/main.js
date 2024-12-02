@@ -1,3 +1,4 @@
+//Select difficulty for the game
 function selectDifficulty(gameDifficulty) {
     switch (gameDifficulty.toLowerCase()) {
         case "easy":
@@ -23,6 +24,7 @@ function selectDifficulty(gameDifficulty) {
     }
 }
 
+//Program game logic
 function gameLogic(userGuess, randomNumber) {
     // Game Logic
     while (userGuess !== randomNumber) {
