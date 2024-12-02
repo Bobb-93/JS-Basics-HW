@@ -50,9 +50,22 @@ let board2d = [
 
 // ---> YOUR CODE HERE <---
 
+function setX(i, j) {
+	for (let rows = 0; rows < board2d.length; rows++) {
+		for (let cols = 0; cols < board2d[0].length; cols++) {
+			if(rows === i && cols === j){
+				board2d[i][j] = 'x';
+			}
+			
+		}
+
+	}
+}
+
 // TEST
 // извикване на функцията setX()
 setX(0, 1);
+showConsoleBoard( board2d );
 setX(2, 0);
 
 // За да видите текущото състояние на дъската за игра, след извикването на setX(0, 1) използвайте функцията:
