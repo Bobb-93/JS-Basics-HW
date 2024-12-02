@@ -1,14 +1,3 @@
-// Initialize Variables
-let difficulty = prompt("Изберете трудност! Easy (за числата от 1 до 10), Normal (1-50) или Hard (1-100)")
-let randomNumber;
-let userGuess = null;
-let userTries = 0;
-let maxNumber = 10;
-let maxTries = 5;
-let numbersHistory = [];
-
-//alert(randomNumber);
-
 function selectDifficulty(gameDifficulty) {
     switch (gameDifficulty.toLowerCase()) {
         case "easy":
@@ -71,6 +60,17 @@ function gameLogic(userGuess, randomNumber) {
     alert(`Общият брой опити е ${userTries}`);
 
 }
+
+// Initialize Variables
+let difficulty = prompt("Изберете трудност! Easy (за числата от 1 до 10), Normal (1-50) или Hard (1-100)")
+let randomNumber;
+let userGuess = null;
+let userTries = 0;
+let maxNumber = 10;
+let maxTries = 5;
+let numbersHistory = [];
+
+//alert(randomNumber);
 
 selectDifficulty(difficulty);
 
