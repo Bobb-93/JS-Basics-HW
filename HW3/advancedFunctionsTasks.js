@@ -32,6 +32,13 @@ const nums = [1, 2, 3, 4];
 const squared = customMap(nums, square);
 console.log(squared);  // Expected output: [1, 4, 9, 16]
 
+//another test
+let squareRoot = x=>Math.sqrt(x);
+const squareRooted = customMap(nums, squareRoot);
+console.log(squareRooted);
+console.log('-------------');
+
+
 // ---------------------------------- Task 2 ---------------------------------- //
     /* DESCRIPTION:
         Write a function named `customFilter` that should take two arguments:
@@ -45,14 +52,31 @@ console.log(squared);  // Expected output: [1, 4, 9, 16]
 
     // YOUR CODE HERE
     // Define customFilter function using function declaration
+function customFilter(array, callbackFunction) {
+    let newArray = [];
 
+    for (let i = 0; i < array.length; i++) {
+        const element = array[i];
+        if(callbackFunction(element)){
+            
+            newArray.push(element);
+        } 
+    }
+
+    return newArray;
+}
     // Define isPositive function using arrow syntax
-
+let isPositive = x=>x>0;
+let isNegative = x=>x<0;
 
     // TEST
-    // const nums = [-1, 1, -2, 3, 4];
-    // const positiveNumbers = customFilter(nums, isPositive);
-    // console.log(positiveNumbers); // Expected output: [1, 3, 4]
+const numsToFilter = [-1, 1, -2, 3, 4];
+const positiveNumbers = customFilter(numsToFilter, isPositive);
+console.log(positiveNumbers); // Expected output: [1, 3, 4]
+
+const negativeNumbers = customFilter(numsToFilter, isNegative);
+console.log(negativeNumbers);
+console.log('-------------');
 
 
 // ---------------------------------- Task 3 ---------------------------------- //
@@ -64,7 +88,9 @@ console.log(squared);  // Expected output: [1, 4, 9, 16]
 
     // YOUR CODE HERE
     // Define compose function using function declaration
-
+function compose(functionOne, functionTwo){
+    
+}
     // Define double and increment functions using arrow syntax
 
 
