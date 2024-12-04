@@ -38,7 +38,6 @@ const squareRooted = customMap(nums, squareRoot);
 console.log(squareRooted);
 console.log('-------------');
 
-
 // ---------------------------------- Task 2 ---------------------------------- //
     /* DESCRIPTION:
         Write a function named `customFilter` that should take two arguments:
@@ -78,7 +77,6 @@ const negativeNumbers = customFilter(numsToFilter, isNegative);
 console.log(negativeNumbers);
 console.log('-------------');
 
-
 // ---------------------------------- Task 3 ---------------------------------- //
     /* DESCRIPTION:
     Implement a function `compose` that takes two functions (double and increment)
@@ -89,11 +87,12 @@ console.log('-------------');
     // YOUR CODE HERE
     // Define compose function using function declaration
 function compose(functionOne, functionTwo){
-    
+    return functionTwo(functionOne()));
 }
     // Define double and increment functions using arrow syntax
-
+let double = x=>x*2;
+let increment = x=>x+1;
 
     // TEST
-    // const doubleThenIncrement = compose(double, increment);
-    // console.log(doubleThenIncrement(3)); // Expected output: 7
+const doubleThenIncrement = compose(double, increment);
+console.log(doubleThenIncrement(3)); // Expected output: 7
