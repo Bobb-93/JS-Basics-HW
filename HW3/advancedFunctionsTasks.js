@@ -87,7 +87,11 @@ console.log('-------------');
     // YOUR CODE HERE
     // Define compose function using function declaration
 function compose(functionOne, functionTwo){
-    return functionTwo(functionOne()));
+    
+    return function(x){
+        let functionOneResult = functionOne(x);
+        return functionTwo(functionOneResult);
+    };
 }
     // Define double and increment functions using arrow syntax
 let double = x=>x*2;
