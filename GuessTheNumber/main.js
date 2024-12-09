@@ -63,11 +63,14 @@ function gameLogic(userGuess, randomNumber) {
 
 }
 
+let generateRandomNumber = (minNumber, maxNumber) => Math.floor(Math.random() * maxNumber) + minNumber;
+
 // Initialize Variables
 let difficulty = prompt("Изберете трудност! Easy (за числата от 1 до 10), Normal (1-50) или Hard (1-100)")
 let randomNumber;
 let userGuess = null;
 let userTries = 0;
+let minNumber = 1;
 let maxNumber = 10;
 let maxTries = 5;
 let numbersHistory = [];
@@ -76,6 +79,6 @@ let numbersHistory = [];
 
 selectDifficulty(difficulty);
 
-randomNumber = Math.floor(Math.random() * maxNumber) + 1; // Generate a Random Number
+randomNumber = generateRandomNumber(minNumber, maxNumber); // Generate a Random Number
 
 gameLogic(userGuess, randomNumber);
