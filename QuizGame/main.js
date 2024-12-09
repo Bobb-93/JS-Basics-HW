@@ -1,5 +1,5 @@
 //Generate questions inside quiz container
-function generateQuestions(quizContainer, questions, options) {
+function displayQuestions(quizContainer, questions, options) {
     quizContainer.innerHTML = '';
 
     for (let i = 0; i < questions.length; i++) {
@@ -73,7 +73,7 @@ let answers = [
 ];
 
 let quizContainer = document.getElementById('quiz-container');
-generateQuestions(quizContainer, questions, options);
+displayQuestions(quizContainer, questions, options);
 
 let submitButton = document.getElementById('submit-quiz');
 checkAnswers(submitButton, answers);
