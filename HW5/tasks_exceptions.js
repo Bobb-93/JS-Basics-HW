@@ -9,17 +9,17 @@
 // YOUR CODE HERE
 
 class NegativeRadius extends Error {
-  constructor(msg) {
-    super(msg);
-    this.message = 'Radius cannot be negative';
-  }
+    constructor(msg) {
+        super(msg);
+        this.message = 'Radius cannot be negative';
+    }
 }
 
 function calculateArea(radius) {
     try {
-        if(radius < 0){
-            throw( new NegativeRadius() );
-        }else{
+        if (radius < 0) {
+            throw (new NegativeRadius());
+        } else {
             return Math.PI * radius * radius;
         }
     } catch (error) {
@@ -42,10 +42,28 @@ console.log(calculateArea(-1)); // EXPECTED OUTPUT: null
 
 // YOUR CODE HERE
 
-// TEST:
-// retryOperation(() => {
-//     throw new Error("Test Error");
-// }); // EXPECTED OUTPUT: "Operation failed after 3 attempts"
+function retryOperation(foo) {
+    let attempts = 0;
+
+    while (attempts < 3) {
+        attempts++;
+        //console.log(`attempts = ${attempts}`);
+        try {
+            foo();
+        }
+        catch (error) {
+            if(attempts==3){
+                console.log('Operation failed after 3 attempts');
+            }
+        }
+    }
+}
+
+
+    // TEST:
+    retryOperation(() => {
+        throw new Error("Test Error");
+    }); // EXPECTED OUTPUT: "Operation failed after 3 attempts"
 
 // ---------------------------------- Task 3 ---------------------------------- //
 /**
