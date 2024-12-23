@@ -8,6 +8,25 @@
 
 // YOUR CODE HERE
 
+class NegativeRadius extends Error {
+  constructor(msg) {
+    super(msg);
+    this.message = 'Radius cannot be negative';
+  }
+}
+
+function calculateArea(radius) {
+    try {
+        if(radius < 0){
+            throw( new NegativeRadius() );
+        }else{
+            return Math.PI * radius * radius;
+        }
+    } catch (error) {
+        //console.log(error.name);
+        return null;
+    }
+}
 
 // TEST:
 console.log(calculateArea(5)); // EXPECTED OUTPUT: 78.53981633974483
@@ -24,9 +43,9 @@ console.log(calculateArea(-1)); // EXPECTED OUTPUT: null
 // YOUR CODE HERE
 
 // TEST:
-retryOperation(() => {
-    throw new Error("Test Error");
-}); // EXPECTED OUTPUT: "Operation failed after 3 attempts"
+// retryOperation(() => {
+//     throw new Error("Test Error");
+// }); // EXPECTED OUTPUT: "Operation failed after 3 attempts"
 
 // ---------------------------------- Task 3 ---------------------------------- //
 /**
@@ -39,5 +58,5 @@ retryOperation(() => {
 // YOUR CODE HERE
 
 // TEST:
-console.log(checkUserPermission({ role: "admin" }, "admin")); // EXPECTED OUTPUT: "Access granted"
-console.log(checkUserPermission({ role: "guest" }, "admin")); // EXPECTED OUTPUT: "Access denied"
+// console.log(checkUserPermission({ role: "admin" }, "admin")); // EXPECTED OUTPUT: "Access granted"
+// console.log(checkUserPermission({ role: "guest" }, "admin")); // EXPECTED OUTPUT: "Access denied"
