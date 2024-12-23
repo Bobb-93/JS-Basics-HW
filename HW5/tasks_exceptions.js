@@ -52,7 +52,7 @@ function retryOperation(foo) {
             foo();
         }
         catch (error) {
-            if(attempts==3){
+            if (attempts == 3) {
                 console.log('Operation failed after 3 attempts');
             }
         }
@@ -60,10 +60,11 @@ function retryOperation(foo) {
 }
 
 
-    // TEST:
-    retryOperation(() => {
-        throw new Error("Test Error");
-    }); // EXPECTED OUTPUT: "Operation failed after 3 attempts"
+// TEST:
+retryOperation(() => {
+    throw new Error("Test Error");
+
+}); // EXPECTED OUTPUT: "Operation failed after 3 attempts"
 
 // ---------------------------------- Task 3 ---------------------------------- //
 /**
@@ -75,6 +76,18 @@ function retryOperation(foo) {
 
 // YOUR CODE HERE
 
+function checkUserPermission(roleObject, role) {
+    try {
+        if (roleObject.role === role) {
+            return "Access granted";
+        }else{
+            throw new Error("Access denied");
+        }
+    } catch (error) {
+       return error.message;
+    }
+}
+
 // TEST:
-// console.log(checkUserPermission({ role: "admin" }, "admin")); // EXPECTED OUTPUT: "Access granted"
-// console.log(checkUserPermission({ role: "guest" }, "admin")); // EXPECTED OUTPUT: "Access denied"
+console.log(checkUserPermission({ role: "admin" }, "admin")); // EXPECTED OUTPUT: "Access granted"
+console.log(checkUserPermission({ role: "guest" }, "admin")); // EXPECTED OUTPUT: "Access denied"
