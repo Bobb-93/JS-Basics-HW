@@ -1,0 +1,13 @@
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 10vh;
+	background: rgba(80, 80, 80, 1);
+	color: #ddd;
+}
+main {
+	margin-top: 10vh;
+	font-size: 2em;
+}
