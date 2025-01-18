@@ -17,5 +17,18 @@ bgChoiceButton.addEventListener("click", function(){
     document.body.style.backgroundColor = bgChoiceValue;
 
     //Set the local storage value
-
+    localStorage.setItem("bgColor", bgChoiceValue);
 });
+
+//get cookie color
+let getColor = localStorage.getItem("bgColor");
+
+console.log(getColor);
+
+if (getColor) {
+    document.body.style.backgroundColor = getColor;
+    bgChoiceSelect.value = getColor;
+} else {
+    document.body.style.backgroundColor = "#FFFFFF";
+    bgChoiceSelect.value = "#FF0000";
+}
