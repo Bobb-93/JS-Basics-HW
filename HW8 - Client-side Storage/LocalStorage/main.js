@@ -5,3 +5,17 @@
     Implement the task with Local Storage.
 
 */
+
+const bgChoiceSelect = document.querySelector(".bgChoice select");
+const bgChoiceButton = document.querySelector(".bgChoice button");
+
+bgChoiceButton.addEventListener("click", function(){
+    let bgChoiceValue = bgChoiceSelect.value;
+    //console.log(bgChoiceValue);
+
+    //Set the current background color of the body
+    document.body.style.backgroundColor = bgChoiceValue;
+
+    //Set the local storage value
+
+});

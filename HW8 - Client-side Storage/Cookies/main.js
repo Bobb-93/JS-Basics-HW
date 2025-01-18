@@ -9,7 +9,7 @@
 const bgChoiceSelect = document.querySelector(".bgChoice select");
 const bgChoiceButton = document.querySelector(".bgChoice button");
 
-bgChoiceButton.addEventListener("click", function(){
+bgChoiceButton.addEventListener("click", function () {
     let bgChoiceValue = bgChoiceSelect.value;
     //console.log(bgChoiceValue);
 
@@ -17,19 +17,25 @@ bgChoiceButton.addEventListener("click", function(){
     document.body.style.backgroundColor = bgChoiceValue;
 
     //Set the cookie value
-    document.cookie = `bgColor=${bgChoiceValue}`;
+    document.cookie = `bgColor=${bgChoiceValue}; path=/`;
+    console.log(document.cookie);
 
 });
 
-let backgroundColorCookie = document.cookie;
-console.log(backgroundColorCookie);
+console.log(document.cookie);
 
-//Get the cookie value
-let cookieColor = backgroundColorCookie.substring(8);
+//get cookie color
+let cookieColor = document.cookie
+    .split("; ")
+    .find((row) => row.startsWith("bgColor="))
+    ?.split("=")[1];
 
-if(cookieColor){
+console.log(cookieColor);
+
+if (cookieColor) {
     document.body.style.backgroundColor = cookieColor;
     bgChoiceSelect.value = cookieColor;
-} else{
+} else {
     document.body.style.backgroundColor = "#FFFFFF";
+    bgChoiceSelect.value = "#FF0000";
 }
