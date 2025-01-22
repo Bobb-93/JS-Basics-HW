@@ -63,10 +63,20 @@
     // YOUR CODE HERE
     // Define createPerson function
 
+    function createPerson(name, age) {
+        let person = {
+            name,
+            age,
+            greet(){
+                return `Hello, my name is ${name}!`;
+            }
+        };
+        return person;
+    }
 
     // TEST
-    // const person = createPerson('Ada Byron', 30);
-    // console.log(person.greet());  // Expected output: "Hello, my name is Ada Byron!"
+    const person = createPerson('Ada Byron', 30);
+    console.log(person.greet());  // Expected output: "Hello, my name is Ada Byron!"
 
 // ---------------------------------- Task 4 ---------------------------------- //
     /* DESCRIPTION:
