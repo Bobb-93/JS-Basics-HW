@@ -45,7 +45,7 @@
         [a, b] = [b, a];
         let resultObject = {a, b};
 
-        return resultObject
+        return resultObject;
     }
 
     // TEST
