@@ -40,9 +40,17 @@
     // YOUR CODE HERE
     // Define swap function
 
+    function swap(obj) {
+        let {a, b} = obj;
+        [a, b] = [b, a];
+        let resultObject = {a, b};
+
+        return resultObject
+    }
+
     // TEST
-    // const obj = { a: 1, b: 2 };
-    // console.log(swap(obj));  // Expected output: { a: 2, b: 1 }
+    const obj = { a: 1, b: 2 };
+    console.log(swap(obj));  // Expected output: { a: 2, b: 1 }
 
 // ---------------------------------- Task 3 ---------------------------------- //
     /* DESCRIPTION:
