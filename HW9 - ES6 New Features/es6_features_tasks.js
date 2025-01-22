@@ -10,15 +10,26 @@
     */
 
     // YOUR CODE HERE
+    const combineArrays = (...args) =>{
+        let resultArray = [];
+        for (const array of args) {
+            resultArray = resultArray.concat(array);           
+        }
+        return resultArray;
+    };
     // Define combineArrays function using Arrow Syntax
 
     // TEST
-    // const array1 = [1, 2, 3];
-    // const array2 = [4, 5];
-    // const array3 = [6, 7, 8];
+    const array1 = [1, 2, 3];
+    const array2 = [4, 5];
+    const array3 = [6, 7, 8];
 
-    // console.log(combineArrays(array1, array3));  // Expected output: [1, 2, 3, 6, 7, 8]
-    // console.log(combineArrays(array1, array2, array3));  // Expected output: [1, 2, 3, 4, 5, 6, 7, 8]
+    console.log(combineArrays(array1, array3));  // Expected output: [1, 2, 3, 6, 7, 8]
+    console.log(combineArrays(array1, array2, array3));  // Expected output: [1, 2, 3, 4, 5, 6, 7, 8]
+
+    //Example for longer array:
+    // let array4  = combineArrays(array1, array2, array3, array3, );
+    // console.log(array4);
 
 // ---------------------------------- Task 2 ---------------------------------- //
     /* DESCRIPTION:
