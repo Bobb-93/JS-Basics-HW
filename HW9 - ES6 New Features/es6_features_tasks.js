@@ -89,7 +89,20 @@
     // YOUR CODE HERE
     // Define countVowels function
 
+    function countVowels(ourText) {
+        let vowelCounter = 0;
+        for (const letter of ourText) {
+            // if(letter === "a" || letter==="e" || letter==="i" || letter==="o" || letter==="u")
+            // {
+            //     vowelCounter++;
+            // }
+            if(letter.includes("a") || letter.includes("e") || letter.includes("i") || letter.includes("o" || letter.includes("u"))){
+                vowelCounter++;
+            }
+        }
+        return vowelCounter;
+    }
 
     // TEST
-    // const text = 'Hello, World!';
-    // console.log(countVowels(text));  // Expected output: 3
+    const text = 'Hello, World!';
+    console.log(countVowels(text));  // Expected output: 3
