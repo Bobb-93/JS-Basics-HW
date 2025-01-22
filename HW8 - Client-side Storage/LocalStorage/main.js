@@ -21,13 +21,13 @@ bgChoiceButton.addEventListener("click", function(){
 });
 
 //get cookie color
-let getColor = localStorage.getItem("bgColor");
+let selectedColor = localStorage.getItem("bgColor");
 
-console.log(getColor);
+console.log(selectedColor);
 
-if (getColor) {
-    document.body.style.backgroundColor = getColor;
-    bgChoiceSelect.value = getColor;
+if (selectedColor) {
+    document.body.style.backgroundColor = selectedColor;
+    bgChoiceSelect.value = selectedColor;
 } else {
     document.body.style.backgroundColor = "#FFFFFF";
     bgChoiceSelect.value = "#FF0000";

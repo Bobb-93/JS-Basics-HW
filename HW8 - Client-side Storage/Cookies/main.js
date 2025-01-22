@@ -25,16 +25,16 @@ bgChoiceButton.addEventListener("click", function () {
 console.log(document.cookie);
 
 //get cookie color
-let cookieColor = document.cookie
+let selectedColor = document.cookie
     .split("; ")
     .find((row) => row.startsWith("bgColor="))
     ?.split("=")[1];
 
-console.log(cookieColor);
+console.log(selectedColor);
 
-if (cookieColor) {
-    document.body.style.backgroundColor = cookieColor;
-    bgChoiceSelect.value = cookieColor;
+if (selectedColor) {
+    document.body.style.backgroundColor = selectedColor;
+    bgChoiceSelect.value = selectedColor;
 } else {
     document.body.style.backgroundColor = "#FFFFFF";
     bgChoiceSelect.value = "#FF0000";
