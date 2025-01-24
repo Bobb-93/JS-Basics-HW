@@ -96,7 +96,7 @@
             // {
             //     vowelCounter++;
             // }
-            if(letter.includes("a") || letter.includes("e") || letter.includes("i") || letter.includes("o" || letter.includes("u"))){
+            if("aeiou".includes(letter)){
                 vowelCounter++;
             }
         }
