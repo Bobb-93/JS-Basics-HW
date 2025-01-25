@@ -181,6 +181,7 @@ console.log('Updated todos: ', updatedTodos);
 //     return totalSum;
 // };
 
+//advanced solution
 const calcTotalPriceByCategory = (products, category) => products
             .filter(product=>product.category===category)
             .reduce((a, c) => a + c.price, 0);
