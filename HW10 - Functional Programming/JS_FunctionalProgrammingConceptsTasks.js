@@ -10,10 +10,14 @@
 
 
 // YOUR CODE HERE
-const filterWordsStartingWithLetter = (sentence, letter)=>{
-    //works with Capital and small letters:
-    return sentence.toLowerCase().split(" ").filter(word => word.startsWith(letter.toLowerCase()));
-};
+
+//Works with the exact letter:
+// const filterWordsStartingWithLetter = (sentence, letter) =>
+//      sentence.split(" ").filter(word => word.startsWith(letter));
+
+//Works with Capital and small letters:
+const filterWordsStartingWithLetter = (sentence, letter) =>
+    sentence.toLowerCase().split(" ").filter(word => word.startsWith(letter.toLowerCase()));
 
 // GIVEN
 const quote = "A common mistake that people make when trying to design something completely foolproof is to underestimate the ingenuity of complete fools";
@@ -36,12 +40,14 @@ console.log(filteredWords);
 
 
 // YOUR CODE HERE:
-
+const sumOfSquaredEvens = (array) => {
+    array.filter(elem => elem % 2 === 0)
+};
 // GIVEN
-// const arr = [1,2,3,4,5,6,7,8,9,10];
+const arr = [1,2,3,4,5,6,7,8,9,10];
 
 // // TEST
-// console.log(sumOfSquaredEvens(arr));
+console.log(sumOfSquaredEvens(arr));
 
 // EXPECTED OUTPUT:
 // 220
