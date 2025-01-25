@@ -171,6 +171,14 @@ console.log('Updated todos: ', updatedTodos);
 
 
 // YOUR CODE HERE
+const calcTotalPriceByCategory = (products, category) =>
+{
+    let totalSum = products
+        .filter(product=>product.category===category)
+        .reduce((a, c) => a + c.price, 0);
+
+    return totalSum;
+};
 
 // GIVEN
 const products = [
@@ -201,8 +209,8 @@ const products = [
 ]
 
 // TEST
-// let totalPriceByCategory = calcTotalPriceByCategory(products,'music')
-// console.log(totalPriceByCategory);
+let totalPriceByCategory = calcTotalPriceByCategory(products,'music')
+console.log(totalPriceByCategory);
 
 // EXPECTED OUTPUT:
 // 5
