@@ -233,6 +233,8 @@ console.log(totalPriceByCategory);
 
 
 // YOUR CODE HERE
+const sortBooksByIdAndAuthor = books =>
+    books.sort((a, b) => (a.id - b.id) || (a.title.localeCompare(b.title)));
 
 // GIVEN
 const books = [
@@ -259,8 +261,8 @@ const books = [
 ];
 
 // TEST
-// const sortedBooks = sortBooksByIdAndAuthor(books);
-// console.log(sortedBooks);
+const sortedBooks = sortBooksByIdAndAuthor(books);
+console.log(sortedBooks);
 
 // EXPECTED OUTPUT:
 // [
