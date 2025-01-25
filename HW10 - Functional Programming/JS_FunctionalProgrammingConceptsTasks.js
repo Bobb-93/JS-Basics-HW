@@ -119,20 +119,23 @@ console.log( minCityName );
 
 const invertTodoCompleted = (todos, todoID) =>
 {
-    console.log(todoID);
+    // console.log(todoID);
 
     // //returns only the changed one:
     // let newTodos = todos
     //     .filter(todo=>todo.id===todoID)
     //     .map(todo => ({ title: todo.title, completed: !todo.completed, id: todo.id }));
 
-    //Attempt:
-    let newTodos = todos
-        .filter(todo=>todo.id===todoID)
-        .map(todo => ({ title: todo.title, completed: !todo.completed, id: todo.id }));
-
-    // let newTodos = todos.filter(todo => todo.id===todoID ? {...todo, completed:!completed}:);
-    return newTodos;
+    let changedTodos = todos
+        .map(todo => {
+            if(todo.id !== todoID)
+                return { title: todo.title, completed: todo.completed, id: todo.id }
+            else 
+                return { title: todo.title, completed: !todo.completed, id: todo.id }
+        }
+    );
+    
+    return changedTodos;
 };
 
 // GIVEN
