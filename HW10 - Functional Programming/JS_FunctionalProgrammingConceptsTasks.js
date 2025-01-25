@@ -64,17 +64,37 @@ console.log(sumOfSquaredEvens(arr));
 
 // YOUR CODE HERE
 
+// const findMinPopulationCityName = cities => {
+
+//     //find the population of the city with minimum population
+//     let cityMinPopulation = cities.map(city => city.population).reduce((a,c)=>a>c?c:a);
+
+//     //return the city name
+//     return cities.filter(city => city.population === cityMinPopulation)[0].name;
+// };
+
+//works...
+const findMinPopulationCityName = cities => {
+
+    //find the population of the city with minimum population
+    let cityMinPopulation = cities.map(city => city.population).reduce((a,c)=>a>c?c:a);
+
+    //return the city name
+    return cities.filter(city => city.population === cityMinPopulation)[0].name;
+};
+
+
 // GIVEN
-// const cities = [
-// 	{name: 'Sofia', population: 1_236_000},
-// 	{name: 'Plovdiv', population: 343_424 },
-// 	{name: 'Burgas', population: 202_766},
-// 	{name: 'Varna', population: 335_177},
-// ];
+const cities = [
+	{name: 'Sofia', population: 1_236_000},
+	{name: 'Plovdiv', population: 343_424 },
+	{name: 'Burgas', population: 202_766},
+	{name: 'Varna', population: 202_766},
+];
 
 // // TEST:
-// const minCityName = findMinPopulationCityName(cities);
-// console.log( minCityName );
+const minCityName = findMinPopulationCityName(cities);
+console.log( minCityName );
 
 // EXPECTED OUTPUT:
 // 'Burgas'
