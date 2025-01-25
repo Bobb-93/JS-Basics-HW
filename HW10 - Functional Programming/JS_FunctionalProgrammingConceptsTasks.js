@@ -11,8 +11,9 @@
 
 // YOUR CODE HERE
 const filterWordsStartingWithLetter = (sentence, letter)=>{
-
-}
+    //works with Capital and small letters:
+    return sentence.toLowerCase().split(" ").filter(word => word.startsWith(letter.toLowerCase()));
+};
 
 // GIVEN
 const quote = "A common mistake that people make when trying to design something completely foolproof is to underestimate the ingenuity of complete fools";
@@ -37,10 +38,10 @@ console.log(filteredWords);
 // YOUR CODE HERE:
 
 // GIVEN
-const arr = [1,2,3,4,5,6,7,8,9,10];
+// const arr = [1,2,3,4,5,6,7,8,9,10];
 
-// TEST
-console.log(sumOfSquaredEvens(arr));
+// // TEST
+// console.log(sumOfSquaredEvens(arr));
 
 // EXPECTED OUTPUT:
 // 220
@@ -58,16 +59,16 @@ console.log(sumOfSquaredEvens(arr));
 // YOUR CODE HERE
 
 // GIVEN
-const cities = [
-	{name: 'Sofia', population: 1_236_000},
-	{name: 'Plovdiv', population: 343_424 },
-	{name: 'Burgas', population: 202_766},
-	{name: 'Varna', population: 335_177},
-];
+// const cities = [
+// 	{name: 'Sofia', population: 1_236_000},
+// 	{name: 'Plovdiv', population: 343_424 },
+// 	{name: 'Burgas', population: 202_766},
+// 	{name: 'Varna', population: 335_177},
+// ];
 
-// TEST:
-const minCityName = findMinPopulationCityName(cities);
-console.log( minCityName );
+// // TEST:
+// const minCityName = findMinPopulationCityName(cities);
+// console.log( minCityName );
 
 // EXPECTED OUTPUT:
 // 'Burgas'
@@ -87,25 +88,25 @@ console.log( minCityName );
 // YOUR CODE HERE
 
 // GIVEN
-const todos = [
-    {
-        "title": "Lean HTML",
-        "completed": true,
-        "id": 1
-    },
-    {
-        "title": "Learn React",
-        "completed": false,
-        "id": 2
-    }
-];
+// const todos = [
+//     {
+//         "title": "Lean HTML",
+//         "completed": true,
+//         "id": 1
+//     },
+//     {
+//         "title": "Learn React",
+//         "completed": false,
+//         "id": 2
+//     }
+// ];
 
-const todoID = 2;
+// const todoID = 2;
 
-// TEST:
-const updatedTodos = invertTodoCompleted(todos, todoID);
-console.log('Original todos: ', todos);
-console.log('Updated todos: ', updatedTodos);
+// // TEST:
+// const updatedTodos = invertTodoCompleted(todos, todoID);
+// console.log('Original todos: ', todos);
+// console.log('Updated todos: ', updatedTodos);
 
 // EXPECTED OUTPUT:
 // Original todos:  [
@@ -159,8 +160,8 @@ const products = [
 ]
 
 // TEST
-let totalPriceByCategory = calcTotalPriceByCategory(products,'music')
-console.log(totalPriceByCategory);
+// let totalPriceByCategory = calcTotalPriceByCategory(products,'music')
+// console.log(totalPriceByCategory);
 
 // EXPECTED OUTPUT:
 // 5
@@ -203,8 +204,8 @@ const books = [
 ];
 
 // TEST
-const sortedBooks = sortBooksByIdAndAuthor(books);
-console.log(sortedBooks);
+// const sortedBooks = sortBooksByIdAndAuthor(books);
+// console.log(sortedBooks);
 
 // EXPECTED OUTPUT:
 // [
