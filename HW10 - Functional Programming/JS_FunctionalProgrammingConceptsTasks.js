@@ -41,7 +41,7 @@ console.log(filteredWords);
 
 // YOUR CODE HERE:
 const sumOfSquaredEvens = (array) => {
-    array.filter(elem => elem % 2 === 0)
+    return array.filter( elem => elem % 2 === 0).map(elem => elem*elem).reduce((acc, num) => acc + num);
 };
 // GIVEN
 const arr = [1,2,3,4,5,6,7,8,9,10];
