@@ -17,7 +17,8 @@
 
 //Works with Capital and small letters:
 const filterWordsStartingWithLetter = (sentence, letter) =>
-    sentence.toLowerCase().split(" ").filter(word => word.startsWith(letter.toLowerCase()));
+    sentence.toLowerCase().split(" ")
+    .filter(word => word.startsWith(letter.toLowerCase()));
 
 // GIVEN
 const quote = "A common mistake that people make when trying to design something completely foolproof is to underestimate the ingenuity of complete fools";
@@ -41,7 +42,8 @@ console.log(filteredWords);
 
 // YOUR CODE HERE:
 const sumOfSquaredEvens = array => 
-    array.filter(elem => elem % 2 === 0).map(elem => elem*elem).reduce((acc, num) => acc + num);
+    array.filter(elem => elem % 2 === 0)
+            .map(elem => elem*elem).reduce((acc, num) => acc + num);
 
 // GIVEN
 const arr = [1,2,3,4,5,6,7,8,9,10];
@@ -73,14 +75,16 @@ console.log(sumOfSquaredEvens(arr));
 //     return cities.filter(city => city.population === cityMinPopulation)[0].name;
 // };
 
-//works...
+//it works...
 const findMinPopulationCityName = cities => {
 
     //find the population of the city with minimum population
-    let cityMinPopulation = cities.map(city => city.population).reduce((a,c)=>a>c?c:a);
+    let cityMinPopulation = cities
+        .map(city => city.population).reduce((a,c)=>a>c?c:a);
 
     //return the city name
-    return cities.filter(city => city.population === cityMinPopulation)[0].name;
+    return cities
+        .filter(city => city.population === cityMinPopulation)[0].name;
 };
 
 
@@ -113,26 +117,37 @@ console.log( minCityName );
 
 // YOUR CODE HERE
 
-// GIVEN
-// const todos = [
-//     {
-//         "title": "Lean HTML",
-//         "completed": true,
-//         "id": 1
-//     },
-//     {
-//         "title": "Learn React",
-//         "completed": false,
-//         "id": 2
-//     }
-// ];
+const invertTodoCompleted = (todos, todoID) =>
+{
+    console.log(todoID);
+    let newTodos;
+    // let newTodos = todos
+    //     .filter(todo=>todo.id===todoID);
 
-// const todoID = 2;
+    // let newTodos = todos.map(todo => todo.id===todoID ? {...todo, completed:!completed}:);
+    return newTodos;
+};
+
+// GIVEN
+const todos = [
+    {
+        "title": "Lean HTML",
+        "completed": true,
+        "id": 1
+    },
+    {
+        "title": "Learn React",
+        "completed": false,
+        "id": 2
+    }
+];
+
+const todoID = 2;
 
 // // TEST:
-// const updatedTodos = invertTodoCompleted(todos, todoID);
-// console.log('Original todos: ', todos);
-// console.log('Updated todos: ', updatedTodos);
+const updatedTodos = invertTodoCompleted(todos, todoID);
+console.log('Original todos: ', todos);
+console.log('Updated todos: ', updatedTodos);
 
 // EXPECTED OUTPUT:
 // Original todos:  [
