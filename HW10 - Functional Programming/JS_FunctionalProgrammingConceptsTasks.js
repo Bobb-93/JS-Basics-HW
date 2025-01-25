@@ -171,14 +171,19 @@ console.log('Updated todos: ', updatedTodos);
 
 
 // YOUR CODE HERE
-const calcTotalPriceByCategory = (products, category) =>
-{
-    let totalSum = products
-        .filter(product=>product.category===category)
-        .reduce((a, c) => a + c.price, 0);
+//basic solution
+// const calcTotalPriceByCategory = (products, category) =>
+// {
+//     let totalSum = products
+//         .filter(product=>product.category===category)
+//         .reduce((a, c) => a + c.price, 0);
 
-    return totalSum;
-};
+//     return totalSum;
+// };
+
+const calcTotalPriceByCategory = (products, category) => products
+            .filter(product=>product.category===category)
+            .reduce((a, c) => a + c.price, 0);
 
 // GIVEN
 const products = [
