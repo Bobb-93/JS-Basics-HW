@@ -6,7 +6,6 @@ const url = "https://api.chucknorris.io/jokes/random "; // work as intended
 // const url = "https://api.chucknsorris.io/jokes/rasndom "; // Error: TypeError: Failed to fetch
 //we don't get any object
 
-
 const dom = {
     showJokeButtton: document.getElementById("show-joke-buttton"),
     jokeText: document.getElementById("joke-text")
