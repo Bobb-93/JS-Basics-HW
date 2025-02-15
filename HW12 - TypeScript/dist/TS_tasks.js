@@ -6,9 +6,11 @@ Write a function named `squareNumber` that takes a number as an argument and ret
 Ensure the argument is typed as a number.
 */
 // YOUR CODE HERE
+// const squareNumber = (n:number):number => n*n;//with return type
+const squareNumber = (n) => n * n;
 // TEST
-// console.log(squareNumber(5));  // Expected output: 25
-// console.log(squareNumber(2.5));  // Expected output: 6.25
+console.log(squareNumber(5)); // Expected output: 25
+console.log(squareNumber(2.5)); // Expected output: 6.25
 // ---------------------------------- Task 2 ---------------------------------- //
 /* DESCRIPTION:
 Write a function named `isOdd` that takes a number as an argument and

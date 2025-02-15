@@ -7,9 +7,12 @@
 
     // YOUR CODE HERE
 
+    // const squareNumber = (n:number):number => n*n;//with return type
+    const squareNumber = (n:number) => n*n;
+
     // TEST
-    // console.log(squareNumber(5));  // Expected output: 25
-    // console.log(squareNumber(2.5));  // Expected output: 6.25
+    console.log(squareNumber(5));  // Expected output: 25
+    console.log(squareNumber(2.5));  // Expected output: 6.25
 
 // ---------------------------------- Task 2 ---------------------------------- //
     /* DESCRIPTION:
