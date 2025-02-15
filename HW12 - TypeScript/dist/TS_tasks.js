@@ -55,9 +55,19 @@ Create a class `Person` with the following properties:
 Add a method `introduce()` that returns a string introducing the person by their full name and age.
 */
 // YOUR CODE HERE
+class Person {
+    constructor(firstName, lastName, age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+    }
+    introduce() {
+        return `Hi, I'm ${this.firstName} ${this.lastName} and I'm ${this.age} years old.`;
+    }
+}
 // TEST
-// const person1 = new Person("Alice", "Johnson", 30);
-// console.log(person1.introduce());  // Expected output: "Hi, I'm Alice Johnson, and I'm 30 years old."
+const person1 = new Person("Alice", "Johnson", 30);
+console.log(person1.introduce()); // Expected output: "Hi, I'm Alice Johnson, and I'm 30 years old."
 // ---------------------------------- Task 5 ---------------------------------- //
 /* DESCRIPTION:
 Create an interface `Animal` with the following properties:

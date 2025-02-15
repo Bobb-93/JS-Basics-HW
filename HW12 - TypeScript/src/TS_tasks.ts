@@ -67,11 +67,19 @@ Add a method `introduce()` that returns a string introducing the person by their
 */
 
 // YOUR CODE HERE
+class Person{
 
+    constructor(public firstName: string, public lastName: string, public age: number){
+    }
+
+    introduce(): string{
+        return `Hi, I'm ${this.firstName} ${this.lastName} and I'm ${this.age} years old.`;
+    }
+}
 
 // TEST
-// const person1 = new Person("Alice", "Johnson", 30);
-// console.log(person1.introduce());  // Expected output: "Hi, I'm Alice Johnson, and I'm 30 years old."
+const person1 = new Person("Alice", "Johnson", 30);
+console.log(person1.introduce());  // Expected output: "Hi, I'm Alice Johnson, and I'm 30 years old."
 
 // ---------------------------------- Task 5 ---------------------------------- //
 /* DESCRIPTION:
