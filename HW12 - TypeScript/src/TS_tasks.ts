@@ -92,10 +92,25 @@ that returns a string using the `sound` property.
 
 // YOUR CODE HERE
 
+interface Animal{
+    name: string,
+    sound: string,
+    speak(): string
+}
+
+class Dog implements Animal{
+
+    constructor(public name: string, public sound: string){
+    }
+
+    speak(): string{
+        return `${this.name} says ${this.sound}!`;
+    }
+}
 
 // // TEST
-// const dog1 = new Dog("Buddy", "woof");
-// console.log(dog1.speak());  // Expected output: "Buddy says woof!"
+const dog1 = new Dog("Buddy", "woof");
+console.log(dog1.speak());  // Expected output: "Buddy says woof!"
 
 // ---------------------------------- Task 6 ---------------------------------- //
 /* DESCRIPTION:
@@ -108,8 +123,23 @@ that returns a string with the employee's details.
 */
 
 // YOUR CODE HERE
+interface Employee{
+    name: string,
+    position: string,
+    salary: number,
+    getDetails(): string
+}
 
+class Manager implements Employee{
+
+    constructor(public name: string, public position: string, public salary: number){
+    }
+
+    getDetails(): string{
+        return `${this.name} is a ${this.position} and earns ${this.salary} annually.`;
+    }
+}
 
 // TEST
-// const manager1 = new Manager("Sarah", "Project Manager", 75000);
-// console.log(manager1.getDetails());  // Expected output: "Sarah is a Project Manager and earns $75000 annually."
+const manager1 = new Manager("Sarah", "Project Manager", 75000);
+console.log(manager1.getDetails());  // Expected output: "Sarah is a Project Manager and earns $75000 annually."

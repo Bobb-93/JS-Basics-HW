@@ -68,28 +68,28 @@ class Person {
 // TEST
 const person1 = new Person("Alice", "Johnson", 30);
 console.log(person1.introduce()); // Expected output: "Hi, I'm Alice Johnson, and I'm 30 years old."
-// ---------------------------------- Task 5 ---------------------------------- //
-/* DESCRIPTION:
-Create an interface `Animal` with the following properties:
-  - `name`: a string.
-  - `sound`: a string.
-Create a class `Dog` that implements the `Animal` interface and includes a method `speak()`
-that returns a string using the `sound` property.
-*/
-// YOUR CODE HERE
+class Dog {
+    constructor(name, sound) {
+        this.name = name;
+        this.sound = sound;
+    }
+    speak() {
+        return `${this.name} says ${this.sound}!`;
+    }
+}
 // // TEST
-// const dog1 = new Dog("Buddy", "woof");
-// console.log(dog1.speak());  // Expected output: "Buddy says woof!"
-// ---------------------------------- Task 6 ---------------------------------- //
-/* DESCRIPTION:
-Create an interface `Employee` with the following properties:
-  - `name`: a string.
-  - `position`: a string.
-  - `salary`: a number.
-Create a class `Manager` that implements the `Employee` interface and includes a method `getDetails()`
-that returns a string with the employee's details.
-*/
-// YOUR CODE HERE
+const dog1 = new Dog("Buddy", "woof");
+console.log(dog1.speak()); // Expected output: "Buddy says woof!"
+class Manager {
+    constructor(name, position, salary) {
+        this.name = name;
+        this.position = position;
+        this.salary = salary;
+    }
+    getDetails() {
+        return `${this.name} is a ${this.position} and earns ${this.salary} annually.`;
+    }
+}
 // TEST
-// const manager1 = new Manager("Sarah", "Project Manager", 75000);
-// console.log(manager1.getDetails());  // Expected output: "Sarah is a Project Manager and earns $75000 annually."
+const manager1 = new Manager("Sarah", "Project Manager", 75000);
+console.log(manager1.getDetails()); // Expected output: "Sarah is a Project Manager and earns $75000 annually."
