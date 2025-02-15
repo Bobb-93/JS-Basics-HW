@@ -22,11 +22,9 @@ returns true if the number is odd, and false if it is even. Type the argument co
 
 // YOUR CODE HERE
 
-// const isOdd = (n: number): boolean => (n % 2);//Type 'number' is not assignable to type 'boolean'
-// const isOdd = (n: number): boolean => <boolean>(n % 2);//Conversion of type 'number' to type 'boolean' may be a mistake because neither
-//  type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+// const isOdd = (n: number): any => (n % 2);//If we don't want ternary
 
-const isOdd = (n: number): boolean => n % 2 ? true : false;
+const isOdd = (n: number): boolean => n % 2 ? true : false; // If we want to return boolean
 
 // TEST
 console.log(isOdd(5));  // Expected output: true
