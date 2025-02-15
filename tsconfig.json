@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+      "allowJs": true,
+      "target": "ES6",                       // Specify ECMAScript target version
+      "module": "ES6",                  	   // Specify module code generation
+      "moduleResolution": "node",   		   // Resolve modules using Node.js-style resolution
+      "esModuleInterop": true,			   // Enable compatibility with CommonJS modules
+      "outDir": "HW12-TypeScript/dist", //Redirect output structure to the 'dist' directory
+      "rootDir": "HW12-TypeScript/src",                    // Specify the root directory of input files
+      "strict": true,                        // Enable all strict type-checking options
+  },
+  "include": ["./HW12-TypeScript/src/**/*.ts"],                	// Specify files to include
+  "exclude": ["node_modules", "**/*.spec.ts"] // Specify files to exclude
+}
