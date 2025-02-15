@@ -43,10 +43,19 @@ Add a method `getCarInfo()` that returns a string with the car's details.
 
 // YOUR CODE HERE
 
+class Car{
+
+    constructor(public make: string, public model: string, public year: number){
+    }
+
+    getCarInfo(): string{
+        return `${this.year} ${this.make} ${this.model}`;
+    }
+}
 
 // TEST
-// const car1 = new Car("Toyota", "Corolla", 2020);
-// console.log(car1.getCarInfo());  // Expected output: "2020 Toyota Corolla"
+const car1 = new Car("Toyota", "Corolla", 2020);
+console.log(car1.getCarInfo());  // Expected output: "2020 Toyota Corolla"
 
 // ---------------------------------- Task 4 ---------------------------------- //
 /* DESCRIPTION:
