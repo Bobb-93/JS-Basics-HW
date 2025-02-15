@@ -17,9 +17,13 @@ Write a function named `isOdd` that takes a number as an argument and
 returns true if the number is odd, and false if it is even. Type the argument correctly.
 */
 // YOUR CODE HERE
+// const isOdd = (n: number): boolean => (n % 2);//Type 'number' is not assignable to type 'boolean'
+// const isOdd = (n: number): boolean => <boolean>(n % 2);//Conversion of type 'number' to type 'boolean' may be a mistake because neither
+//  type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+const isOdd = (n) => n % 2 ? true : false;
 // TEST
-// console.log(isOdd(5));  // Expected output: true
-// console.log(isOdd(4));  // Expected output: false
+console.log(isOdd(5)); // Expected output: true
+console.log(isOdd(4)); // Expected output: false
 // ---------------------------------- Task 3 ---------------------------------- //
 /* DESCRIPTION:
 Create a class `Car` with the following properties:
